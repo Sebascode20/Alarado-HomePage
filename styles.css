@@ -1,0 +1,369 @@
+/* -------------------------------------------------- Estilos Generales ------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  /*font-size: calc(18px + (60 - 18) * ((100vw - 300px) / (1400 - 300)));*/
+  background-color: #f2f9fe;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-2 {
+  margin: 1rem 0.5rem 0.5rem 1rem;
+  padding: 0.8rem 2.5rem;
+  min-width: 110px;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #2a4dd0;
+}
+
+/* ------------------------------------------------------ Beneficios ---------------------------------------------------------- */
+
+.benefits {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.benefits li {
+  display: inline;
+  color: #909193;
+}
+
+.benefits li img {
+  width: 18px;
+  height: 18px;
+}
+
+.benefits li:nth-child(1),
+li:nth-child(2) {
+  display: inline;
+  vertical-align: sub;
+  font-size: 0.875rem;
+}
+
+.benefits li:nth-child(1) {
+  margin-left: 1rem;
+}
+
+.benefits li:nth-child(1) > img,
+li:nth-child(2) > img {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+.benefits li:nth-child(2) {
+  margin: 10rem 0.2rem 10rem 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.demo {
+  display: inline;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #2a4dd0;
+}
+
+.demo + img {
+  margin-top: 2rem;
+}
+
+/* ---------------------------------------------------------- header ---------------------------------------------------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4rem;
+}
+
+.hero-image + p {
+  margin-inline: 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #111729;
+}
+
+h1 {
+  margin-block: 1rem;
+  margin-inline: 1rem;
+  max-width: 430px;
+  font-size: 2.75rem;
+  font-weight: bolder;
+  color: #223344;
+}
+
+h1 + p {
+  margin: 2rem 2rem 1.3rem 1rem;
+  max-width: 460px;
+  font-weight: bold;
+  color: #909193;
+}
+
+/* ------------------------------------------------------------ Logo ------------------------------------------------------- */
+
+.alarado-logo {
+  margin-block: 2rem;
+  margin-inline: 1rem;
+}
+
+.hero-image {
+  max-width: 488px;
+}
+
+/* ------------------------------------------------------- Menú Hamburguesa --------------------------------------------------- */
+
+.open-menu,
+.close-menu {
+  display: block;
+  margin: 1rem;
+  border: 0;
+  font-size: 2rem;
+  background-color: transparent;
+  color: #111729;
+}
+
+.close-menu {
+  margin: 0;
+}
+
+.nav {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.nav-list li {
+  margin-block: 1.5rem;
+}
+
+.nav-list li:nth-child(1) a {
+  color: #223344;
+}
+
+.nav-list li a {
+  margin-block: 1rem;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #909193;
+}
+
+/* -------------------------------------------------------- Switch ------------------------------------------------------------ */
+
+.switch {
+  display: flex;
+  position: relative;
+  right: 70px;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: #111729;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+}
+
+.switch.active {
+  background: #111729;
+  color: #ffffff;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #ffffff;
+}
+
+.switch span > .sun {
+  margin-top: 0.25rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.switch span > .moon {
+  margin-top: 0.25rem;
+  width: 20px;
+  height: 20px;
+}
+
+body.dark {
+  background-color: #111729;
+}
+
+body.dark h1,
+body.dark .hero-image + p {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 48em) {
+  .btn-2,
+  h1,
+  h1 + p,
+  .hero-image + p,
+  .benefits {
+    margin-left: 4rem;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: none;
+  }
+
+  .nav {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row; /* Cambia la dirección del menú a horizontal */
+    justify-content: space-around;
+    align-items: center;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    width: 72%;
+  }
+
+  .nav-list {
+    flex-direction: row; /* Alinea los elementos del menú horizontalmente */
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .nav-list li {
+    margin-inline: 1rem;
+  }
+
+  .nav-list li a {
+    font-size: 1rem;
+  }
+
+  h1 {
+    max-width: 730px;
+    font-size: 3.75rem;
+    white-space: break-spaces;
+  }
+
+  .hero-image {
+    margin: 0 auto;
+  }
+
+  .hero-image > img {
+    max-width: 470px;
+  }
+
+  .white {
+    color: #ffffff !important;
+  }
+
+  .main-color {
+    color: #111729;
+  }
+
+  .switch {
+    right: 16px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .alarado-logo {
+    margin-inline: 3.5rem;
+  }
+
+  .benefits {
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+
+  .hero-image {
+    margin: 0 11rem;
+    float: right;
+  }
+
+  .hero-image + p {
+    margin-top: 1rem;
+  }
+
+  h1 {
+    max-width: 430px;
+  }
+}
